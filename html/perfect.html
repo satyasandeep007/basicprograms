@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+    </div>
+</body>
+<script>
+    let number = prompt("enter the number");
+    let num = parseInt(number,10);
+    const perfectNumber = function () {
+        let temp = 0;
+        for (let i = 1; i <= num / 2; i++) {
+            if (num % i === 0) {
+                temp += i;
+            }
+        }
+        if (temp === num && temp !== 0) {
+         
+            document.getElementById('root').innerHTML = 'it is  a perfect number';
+           
+        } else {
+            document.getElementById('root').innerHTML = 'it is not perfect number';
+           
+        }
+    }
+    perfectNumber();
+</script>
+</html>
